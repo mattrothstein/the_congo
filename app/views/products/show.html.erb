@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @product.description %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.formatted_price %>
+</p>
+<h3>Reviews</h3>
+<% @product.reviews.each do |review| %>
+  <p>
+    <%=review.comment %>
+    <br>
+    Added on: <%= review.created_at %>
+  </p>
+  <% end %>
+
+  <h3>New Review</h3>
+<%= render 'reviews/form' %>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>
