@@ -16,7 +16,7 @@
 </p>
 <h3>Images</h3>
 <% @product.images.each do |image| %>
-  <img src= <%= image.url %>/>
+<img style="max-width:200px; max-height:200px" src= "<%=image.url %>"/>
 <% end%>
 <h3>Reviews</h3>
 <% @product.reviews.each do |review| %>
