@@ -15,6 +15,7 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
+    @image = Image.new
     @product = Product.new
   end
 
