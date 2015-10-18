@@ -1,23 +1,29 @@
 <p id="notice"><%= notice %></p>
 
+<div class="container">
+<div class="col-md-3 ">
+<% @product.images.each do |image| %>
+<img class= "img-responsive img-thumbnail" src= "<%=image.url %>"/>
+</div>
+<div class="col-md-9 col-sm-12">
 <p>
-  <strong>Name:</strong>
-  <%= @product.name %>
+  <h2><%= @product.name %></h2>
 </p>
-
+</div>
+<div class="col-md-9 col-sm-12">
 <p>
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
-
+</div>
+<div class="col-md-9 col-sm-12">
 <p>
   <strong>Price:</strong>
-  <%= @product.formatted_price %>
+  $<%= @product.formatted_price %>
 </p>
-<h3>Images</h3>
-<% @product.images.each do |image| %>
-<img style="max-width:200px; max-height:200px" src= "<%=image.url %>"/>
 <% end%>
+</div>
+<div class="col-md-12 col-md-offset-3 col-sm-12">
 <h3>Reviews</h3>
 <% @product.reviews.each do |review| %>
   <p>
@@ -26,10 +32,13 @@
     Added on: <%= review.created_at %>
   </p>
   <% end %>
-
+  </div>
+  <div class="col-md-3 col-md-offset-3 col-sm-12 col-sm-5">
   <h3>New Review</h3>
 <%= render 'reviews/form' %>
-
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+</div>
+<div class="col-md-12 col-sm-12 col-xs-12">
+<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>  
+<%= link_to 'Back', products_path, class: "btn btn-default" %>
+</div>
+</div>

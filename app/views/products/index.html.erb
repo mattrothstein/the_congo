@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
-
+<div class="container">
+<div class="col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-11 col-xs-offset-1">
 <h1>Listing Products</h1>
+</div>  
 
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Name</th>
@@ -16,11 +18,11 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
-        <td><%= product.description %></td>
+        <td><%= product.description.lines.first %></td>
         <td><%= product.formatted_price %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', product, class: "btn-sm btn-default" %></td>
+        <td><%= link_to 'Edit', edit_product_path(product), class: "btn-sm btn-default" %></td>
+        <td><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-default" %></td>
       </tr>
     <% end %>
   </tbody>
@@ -28,4 +30,5 @@
 
 <br>
 
-<%= link_to 'New Product', new_product_path %>
+<%= link_to 'New Product', new_product_path, class: "btn btn-default" %>
+</div>  
