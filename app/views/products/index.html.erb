@@ -18,11 +18,11 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
-        <td><%= product.description %></td>
+        <td><%= product.description.lines.first %></td>
         <td><%= product.formatted_price %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= link_to 'Edit', edit_product_path(product) %></td>
-        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', product, class: "btn-sm btn-default" %></td>
+        <td><%= link_to 'Edit', edit_product_path(product), class: "btn-sm btn-default" %></td>
+        <td><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-default" %></td>
       </tr>
     <% end %>
   </tbody>
