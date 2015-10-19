@@ -36,7 +36,7 @@
     <p>
       <%=review.comment %>
       <br>
-      Added on: <%= review.created_at %>
+      Added <%= time_ago_in_words(review.created_at) %> ago.
     </p>
     <% end %>
   </div>
