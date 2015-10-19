@@ -11,19 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
+   <div class="form-group col-md-6">
     <%= f.label :title %><br>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group col-md-12">
     <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= f.text_field :url, class: "form-control col-md-12" %>
   </div>
-  <div class="field">
+  <div class="form-group col-md-4">
     <%= f.label :product_id %><br>
-    <%= f.text_field :product_id %>
+    <%= f.text_field :product_id, class: "form-control col-md-12" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="actions col-md-12 col-sm-12 col-xs-12">
+    <input class="btn btn-default" type="submit" name="commit" value="Create Image">
   </div>
 <% end %>

@@ -23,8 +23,11 @@
     <%= f.label :price %><br>
     <%= f.number_field :price_in_cents, class: "form-control" %>
   </div>
-  <h3>Images</h3>
+  <div class="col-md-12">
+  <h3>Image</h3>
+  </div>
   <%= render 'images/form' %>
+
   <br>
   <div class="actions col-md-12 col-sm-12 col-xs-12">
     <input class="btn btn-default" type="submit" name="commit" value="Submit">
