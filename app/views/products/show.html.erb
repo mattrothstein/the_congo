@@ -1,44 +1,45 @@
 <p id="notice"><%= notice %></p>
 
-<div class="container">
-<div class="col-md-3 ">
-<% @product.images.each do |image| %>
-<img class= "img-responsive img-thumbnail" src= "<%=image.url %>"/>
-</div>
-<div class="col-md-9 col-sm-12">
-<p>
-  <h2><%= @product.name %></h2>
-</p>
-</div>
-<div class="col-md-9 col-sm-12">
-<p>
-  <strong>Description:</strong>
-  <%= @product.description %>
-</p>
-</div>
-<div class="col-md-9 col-sm-12">
-<p>
-  <strong>Price:</strong>
-  $<%= @product.formatted_price %>
-</p>
-<% end%>
-</div>
-<div class="col-md-12 col-md-offset-3 col-sm-12">
-<h3>Reviews</h3>
-<% @product.reviews.each do |review| %>
-  <p>
-    <%=review.comment %>
-    <br>
-    Added on: <%= review.created_at %>
-  </p>
-  <% end %>
+
+<div class= "container">
+  <div class="col-md-9 col-md-offset-3 col-sm-12">
+    <p>
+      <h2><%= @product.name %></h2>
+    </p>
   </div>
-  <div class="col-md-3 col-md-offset-3 col-sm-12 col-sm-5">
+  <div class="col-md-9 col-md-offset-3 col-sm-12">
+    <p>
+      <strong>Description:</strong>
+      <%= @product.description %>
+    </p>
+  </div>
+  <div class="col-md-9 col-md-offset-3 col-sm-12">
+    <p>
+      <strong>Price:</strong>
+      $<%= @product.formatted_price %>
+    </p>
+  </div>
+  <div class="col-md-3 col-md-offset-3">
+    <% @product.images.each do |image| %>
+    <img src= "<%=image.url %>"/>
+    <% end%>
+  </div>
+  <div class="col-md-9 col-md-offset-3 col-sm-12">
+    <h3>Reviews</h3>
+    <% @product.reviews.each do |review| %>
+    <p>
+      <%=review.comment %>
+      <br>
+      Added on: <%= review.created_at %>
+    </p>
+    <% end %>
+  </div>
+</div>
+<div class="col-md-3 col-md-offset-3 col-sm-12 col-sm-5">
   <h3>New Review</h3>
-<%= render 'reviews/form' %>
+  <%= render 'reviews/form' %>
 </div>
 <div class="col-md-12 col-sm-12 col-xs-12">
-<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>  
-<%= link_to 'Back', products_path, class: "btn btn-default" %>
-</div>
+  <%= link_to 'Edit', edit_product_path(@product), class: "btn btn-default" %>
+  <%= link_to 'Back', products_path, class: "btn btn-default" %>
 </div>

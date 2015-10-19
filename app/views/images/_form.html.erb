@@ -1,16 +1,36 @@
 <%= form_for(@image) do |f| %>
-  <% if @image.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h2>
+<% if @image.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@image.errors.count, "error") %> prohibited this image from being saved:</h2>
 
-      <ul>
-      <% @image.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
+  <ul>
+    <% @image.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+<div class="field">
+  <%= f.label :title %><br>
+  <%= f.text_field :title %>
+</div>
+<div class="field">
+  <%= f.label :url %><br>
+  <%= f.text_field :url %>
+</div>
+
+​<% if @product.nil? %>
+<div class="field">
+  <%= f.label :product_id %><br>
+  <%= f.text_field :product_id %> </div>
+  <% else %>
+  <%= f.label :product_id %><br>
+  <%= f.text_field :product_id, disabled: true, value: @product.id
+  %>
   <% end %>
 
+<<<<<<< HEAD
    <div class="form-group col-md-6">
     <%= f.label :title %><br>
     <%= f.text_field :title, class: "form-control" %>
@@ -25,5 +45,10 @@
   </div>
   <div class="actions col-md-12 col-sm-12 col-xs-12">
     <input class="btn btn-default" type="submit" name="commit" value="Create Image">
+=======
+
+  <div class="actions">
+    <%= f.submit %>
+>>>>>>> 65d76941609dd97014759e088573e2c56bc08d44
   </div>
-<% end %>
+  <% end %>
