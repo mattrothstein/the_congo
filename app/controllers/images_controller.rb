@@ -1,6 +1,6 @@
 class ImagesController < ApplicationController
   before_action :set_image, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_product
   # GET /images
   # GET /images.json
   def index
@@ -14,6 +14,7 @@ class ImagesController < ApplicationController
 
   # GET /images/new
   def new
+
     @image = Image.new
   end
 
@@ -28,7 +29,7 @@ class ImagesController < ApplicationController
 
     respond_to do |format|
       if @image.save
-        format.html { redirect_to @image, notice: 'Image was successfully created.' }
+        format.html { redirect_to @product}
         format.json { render :show, status: :created, location: @image }
       else
         format.html { render :new }
@@ -70,5 +71,9 @@ class ImagesController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def image_params
       params.require(:image).permit(:title, :url, :product_id)
+    end
+
+    def set_product
+      @product = Product.find(params[:product_id])
     end
 end
