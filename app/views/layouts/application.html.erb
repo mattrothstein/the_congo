@@ -31,7 +31,7 @@
     <li class="active"><a href="/ideas">Ideas</a></li>
   </ul> -->
 
-  <div class= "">
+  <footer class= "actions col-md-12 col-sm-12 col-xs-12">
   <% if user_signed_in? %>
   <p> Logged in as <strong><%= current_user.email %></strong>.</p>
   <ul>
@@ -44,5 +44,5 @@
   <li class= "bottom"> <%= link_to 'Login', new_user_session_path, class: "btn btn-default" %></li>
   </ul>
   <% end %>
-</div>
+</footer>
 </html>
