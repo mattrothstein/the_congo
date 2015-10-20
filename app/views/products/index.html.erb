@@ -1,9 +1,13 @@
 <p id="notice"><%= notice %></p>
   <br>
+  <div class="push_left">
+<div class="page_label">
+    <h1> SHOP ON CONGO </H1>
+    </div>
   <% @products.each do |product| %>
   <div class="product_display">
     <% product.images.each do |image|%>
-    <img style="width:30%" src="<%=image.url %>" alt="product image">
+    <img style="width:100px; height:100px" src="<%=image.url %>" alt="product image">
     <%end%>
     <p><%= link_to "#{product.name.capitalize}", product%></p>
     <p>$<%= product.formatted_price %></p>
