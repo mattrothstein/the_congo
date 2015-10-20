@@ -74,7 +74,16 @@ div.page_label{
 }
 
 div.push_left{
-  width:70%;
+  width:60%;
   margin-left: 5%;
   float: left;
 }
+
+/*.footer {
+    position:absolute;
+    bottom:0px;
+    width: 100%;
+    margin: 0;
+    background-color: #000;
+    height: 100px;/* or however high you would like */
+}*/
