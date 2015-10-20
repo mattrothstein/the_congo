@@ -28,7 +28,7 @@ class ReviewsController < ApplicationController
 
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review}
+        format.html { redirect_to product_path(params[])}
         format.json { render :show, status: :created, location: @review }
       else
         format.html { render :new }
