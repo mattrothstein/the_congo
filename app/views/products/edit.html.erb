@@ -9,6 +9,7 @@
 <br>
 <div class="col-md-12 col-sm-12 col-xs-12">
 <%= link_to 'Show', @product, class: "btn btn-default" %>
+<%= link_to 'Add Image', new_product_image_path(@product), class: "btn btn-default" %>
 <%= link_to 'Delete', @product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-default" %>
 <%= link_to 'Products', products_path, class: "btn btn-default" %>
 </div>
