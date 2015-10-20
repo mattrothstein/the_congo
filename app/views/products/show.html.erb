@@ -13,6 +13,7 @@
  <div class="col-md-5">
     <% @product.images.each do |image| %>
     <img class="img-responsive" src="<%=image.url %>" alt="product image">
+    <% end%>
     </div>
     <div class="col-md-3 col-sm-12">
     <p>
@@ -37,7 +38,6 @@
     </p>
   </div>
   </div>
-    <% end%>
   <div class="row">
   <div class="col-md-6 col-sm-12">
     <h3>Reviews <i class="fa fa-comments-o"></i></h3>
