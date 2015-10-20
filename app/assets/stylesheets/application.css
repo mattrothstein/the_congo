@@ -50,8 +50,34 @@
   color: white;
   font-size: 1.25rem
 }
+div.product_display{
+  float:left;
+  width:33%;
+  text-align: center;
+  margin: 0,auto;
+}
 
+div.link{
+  width:100%;
+  margin: 0,auto;
+  text-align: center;
+  float: left;
+}
+
+div.page_label{
+  width:100%;
+  margin: 0,auto;
+  text-align: center;
+
+<<<<<<< HEAD
 body {
   background-image: url();
+=======
+}
+div.push_left{
+  width:70%;
+  margin-left: 5%;
+  float: left;
+>>>>>>> 88d84855579886a3105df99571141e9c4b800f55
 
 }
