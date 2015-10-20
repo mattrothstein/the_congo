@@ -69,10 +69,15 @@ div.page_label{
   margin: 0,auto;
   text-align: center;
 
+<<<<<<< HEAD
+body {
+  background-image: url();
+=======
 }
 div.push_left{
   width:70%;
   margin-left: 5%;
   float: left;
+>>>>>>> 88d84855579886a3105df99571141e9c4b800f55
 
 }
