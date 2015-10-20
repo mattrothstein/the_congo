@@ -1,22 +1,23 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <br>
 <div class="push_left">
-<div class="page_label">
-  <h1> SHOP ON CONGO </H1>
-  </div>
-  <% @products.each do |product| %>
-   <% if product.images.count >= 1 %>
+  <div class="page_label">
+    <h1> SHOP ON CONGO </H1>
+    </div>
+    <% @products.each do |product| %>
+    <% if product.images.count >= 1 %>
     <div class="product_display">
-      <img style="width:100px; height:100px" src="<%= product.images.first.url%>" alt="product image">
+      <!-- <div style="width:150px; height:150px; margin: auto"> -->
+        <img style=" max-height:100px" src="<%= product.images.first.url%>" alt="product image">
+      <!-- </div> -->
       <p><%= link_to "#{product.name.capitalize}", product%></p>
       <p>$<%= product.formatted_price %></p>
     </div>
     <% end %>
-  <% end %>
-  <div class="link">
-    <br>
-    <%= link_to 'New Product', new_product_path, class: "btn btn-default button" %>
-    <br>
+    <% end %>
+    <div class="link">
+      <br>
+      <%= link_to 'New Product', new_product_path, class: "btn btn-default button" %>
+      <br>
+    </div>
   </div>
-</div>
-
