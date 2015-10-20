@@ -11,7 +11,9 @@
 </head>
 <body>
 
+<% if current_user.nil? %>
 
+<% else %>
   <div class="header container">
     <div class="site">
       <h3 class = "title"><i class="fa fa-shopping-cart"></i> CONGO</i></h3>
@@ -31,6 +33,7 @@
       <% end %>
     </div>
   </div>
+  <% end %>
 
 
     <% if notice %>
