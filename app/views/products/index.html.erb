@@ -6,9 +6,7 @@
     </div>
     <% @products.each do |product| %>
     <div class="product_display">
-      <% product.images.each do |image|%>
-      <img style="width:100px; height:100px" src="<%=image.url %>" alt="product image">
-      <%end%>
+      <img style="width:100px; height:100px" src="<%=product.images.first.url %>" alt="product image">
       <p><%= link_to "#{product.name.capitalize}", product%></p>
       <p>$<%= product.formatted_price %></p>
     </div>
