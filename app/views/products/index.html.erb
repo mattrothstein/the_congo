@@ -13,7 +13,6 @@
     <%end%>
     <p><%= link_to "#{product.name.capitalize}", product%></p>
     <p>$<%= product.formatted_price %></p>
-    <p><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-default" %></p>
   </div>
   <% end %>
   <div class="link">
