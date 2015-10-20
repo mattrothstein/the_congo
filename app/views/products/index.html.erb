@@ -1,22 +1,19 @@
 <!-- <p id="notice"><%= notice %></p> -->
 <br>
 <div class="push_left">
-  <div class = "page_label">
-    <h3>SHOP ON CONGO</h3>
-  </div>
-  <br>
-  <% @products.each do |product| %>
-  <div class="product_display">
-    <img style="width:30%" src="<%=product.images.first.url %>" alt="product image">
-    <%end%>
-    <p><%= link_to "#{product.name.capitalize}", product%></p>
-    <p>$<%= product.formatted_price %></p>
-    <p><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-default" %></p>
-  </div>
-  <% end %>
-  <div class="link">
-    <br>
-    <%= link_to 'New Product', new_product_path, class: "btn btn-default button" %>
-    <br>
-  </div>
-</div>
+ <div class="page_label">
+   <h1> SHOP ON CONGO </H1>
+   </div>
+   <% @products.each do |product| %>
+   <div class="product_display">
+     <img style="width:100px; height:100px" src="<%=product.images.first.url %>" alt="product image">
+     <p><%= link_to "#{product.name.capitalize}", product%></p>
+     <p>$<%= product.formatted_price %></p>
+   </div>
+   <% end %>
+   <div class="link">
+     <br>
+     <%= link_to 'New Product', new_product_path, class: "btn btn-default button" %>
+     <br>
+   </div>
+ </div>
