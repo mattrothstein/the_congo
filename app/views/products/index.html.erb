@@ -1,38 +1,4 @@
 <p id="notice"><%= notice %></p>
-<<<<<<< HEAD
-<div class="container">
-  <div class="col-md-6 col-md-offset-4 col-sm-6 col-sm-offset-3 col-xs-11 col-xs-offset-1">
-      <h1>All Products</h1>
-  </div>
-=======
->>>>>>> 88d84855579886a3105df99571141e9c4b800f55
-
-
-<<<<<<< HEAD
-          <tbody>
-            <% @products.each do |product| %>
-            <tr>
-              <td class="center"><%= product.name %></td>
-              <td class="center"><%= product.description.lines.first %></td>
-              <td class="center">$<%= product.formatted_price %></td>
-              <td class="center"><%= link_to 'Show', product, class: "btn-sm btn-success" %></td>
-              <td class="center"><%= link_to 'Edit', edit_product_path(product), class: "btn-sm btn-success" %></td>
-              <td class="center"><%= link_to 'Delete', product, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn-sm btn-success" %></td>
-            </tr>
-            <% end %>
-          </tbody>
-        </table>
-
-      <br>
-      <%= link_to 'New Product', new_product_path, class: "btn btn-primary button" %>
-      <br>
-    </div>
-=======
-<div class="push_left">
-  <div class = "page_label">
-    <h3>All Products</h3>
->>>>>>> 88d84855579886a3105df99571141e9c4b800f55
-  </div>
   <br>
   <% @products.each do |product| %>
   <div class="product_display">
