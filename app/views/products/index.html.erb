@@ -5,11 +5,13 @@
    <h1> SHOP ON CONGO </H1>
    </div>
    <% @products.each do |product| %>
-   <div class="product_display">
-     <img style="width:100px; height:100px" src="<%=product.images.first.url %>" alt="product image">
-     <p><%= link_to "#{product.name.capitalize}", product%></p>
-     <p>$<%= product.formatted_price %></p>
-   </div>
+    <% if product.images.count > 1 %>
+     <div class="product_display">
+       <img style="width:100px; height:100px" src="<%= product.images.first.url%>" alt="product image">
+       <p><%= link_to "#{product.name.capitalize}", product%></p>
+       <p>$<%= product.formatted_price %></p>
+     </div>
+     <% end %>
    <% end %>
    <div class="link">
      <br>
