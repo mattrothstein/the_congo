@@ -1,5 +1,18 @@
-<h1>New Image</h1>
+<div class="container">
+  <div class="container">
+    <div class="col-md-5">      
+    <h1>New Image</h1>
+    </div>
+  </div>
+   
+    <%= render 'form' %>
 
-<%= render 'form' %>
+    <div class="container">
+    <div class="container">
+    <%= link_to 'Back', product_path(@product), class: "btn btn-default" %>
+    </div>
+    </div>
+    
+</div>
 
-<%= link_to 'Back', product_path(@product) %>
+

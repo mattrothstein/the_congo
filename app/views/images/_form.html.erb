@@ -10,26 +10,39 @@
   </ul>
 </div>
 <% end %>
+<br>
+<div class="container">
 
-<div class="field">
-  <%= f.label :title %><br>
-  <%= f.text_field :title %>
-</div>
-<div class="field">
-  <%= f.label :url %><br>
-  <%= f.text_field :url %>
-</div>
+  <div class="col-md-3"> 
+      <div class="field">
+        <%= f.label :title %><br>
+        <%= f.text_field :title, class: "form-control" %>
+      </div>
+  </div>    
+  <div class="col-md-6">  
+      <div class="field">
+        <%= f.label :url %><br>
+        <%= f.text_field :url, class: "form-control" %>
+      </div>
+  </div> 
+     
+     
 
-​<% if @product.nil? %>
-<div class="field">
-  <%= f.label :product_id %><br>
-  <%= f.text_field :product_id %> </div>
-  <% else %>
-  ​<%= f.hidden_field :product_id, value: @product.id %>
-  <% end %>
+        ​<% if @product.nil? %>
+        <div class="field">
+        <%= f.label :product_id %><br>
+        <%= f.text_field :product_id %> 
+        </div>
+        <% else %>
+        ​<%= f.hidden_field :product_id, value: @product.id %>
+        <% end %>
+         
+ 
+      <div class="actions col-md-12 col-sm-12 col-xs-12">
+          <input class="btn btn-default" type="submit" name="commit" value="Submit">
+      </div>
 
-  <div class="actions col-md-12 col-sm-12 col-xs-12">
-    <input class="btn btn-default" type="submit" name="commit" value="Submit">
-  </div>
-</div>
+</div>  
+
+
 <% end %>
