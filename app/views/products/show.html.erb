@@ -2,32 +2,33 @@
 
 
 <div class= "container">
-  <div class="row">
-    <div class="col-md-12 col-sm-12">
-      <p>
-        <h2><%= @product.name.capitalize %></h2>
-      </p>
-    </div>
+<<<<<<< HEAD
+<div class="row">
+  <div class="col-md-12 col-sm-12">
+    <p>
+      <h2><%= @product.name %></h2>
+    </p>
+  </div>
   </div>
   <div class="row">
-    <div class="product-gallery">
-      <ul>
-        <% @product.images.each do |image| %>
-        <li class="col-md-6"><img class="img-responsive" src="<%=image.url %>" alt="product image"></li>
-        <% end%>
-      </ul>
+  <div class="product-gallery">
+  <div class="col-md-6">
+ <ul>
+    <% @product.images.each do |image| %>
+    <li class="col-md-4"><img class="img-thumbnail" src="<%=image.url %>" alt="product image"></li>
+    <% end%>
+    </ul>
     </div>
-    <div class="col-md-1 col-md-offset-2 col-sm-12">
-      <p>
-        <strong>Price:</strong>
-        $<%= @product.formatted_price %>
-      </p>
-    </div>
+    <div class="col-md-1 col-sm-12">
+    <p>
+      <strong>Price:</strong>
+      $<%= @product.formatted_price %>
+    </p>
+  </div>
     <div class="col-md-5">
       <%= link_to 'Add to Cart', purchase_path, class: "btn btn-default button"  %>
       <br>
     </div>
-
   </div>
   <div class="row">
     <div class="col-md-9 col-sm-12">
