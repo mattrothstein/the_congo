@@ -1,7 +1,8 @@
-<p id="notice"><%= notice %></p>
+<!-- <p id="notice"><%= notice %></p> -->
 
 
 <div class= "container">
+<<<<<<< HEAD
 <div class="row">
   <div class="col-md-12 col-sm-12">
     <p>
@@ -24,44 +25,41 @@
       $<%= @product.formatted_price %>
     </p>
   </div>
-  <div class="col-md-5">
-  <button type="button" class="btn btn-lg btn-success">Buy Now&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</button>
-  </div>
-   <div class="col-md-5 col-md-offset-7">
-    <br>
-  <button type="button" class="btn btn-lg btn-primary">Add To Wish List</button>
-  </div>
-  </div>
-  <div class="row">
-  <div class="col-md-9 col-sm-12">
-  <br>
-    <p>
-      <strong>Description:</strong>
-      <%= simple_format(@product.description) %>
-    </p>
-  </div>
-  </div>
-  <div class="row">
-  <div class="col-md-6 col-sm-12">
-    <h3>Reviews <i class="fa fa-comments-o"></i></h3>
-
-    <% @product.reviews.each do |review| %>
-    <p class="review-font">
-      <%=review.comment %>
+    <div class="col-md-5">
+      <%= link_to 'Add to Cart', purchase_path, class: "btn btn-default button"  %>
       <br>
-      Added <%= time_ago_in_words(review.created_at) %> ago.
-    </p>
-    <% end %>
+    </div>
   </div>
+  <div class="row">
+    <div class="col-md-9 col-sm-12">
+      <br>
+      <p>
+        <strong>Description:</strong>
+        <%= simple_format(@product.description) %>
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <h3>Reviews <i class="fa fa-comments-o"></i></h3>
+
+      <% @product.reviews.each do |review| %>
+      <p class="review-font">
+        <%=review.comment %>
+        <br>
+        Added <%= time_ago_in_words(review.created_at) %> ago.
+      </p>
+      <% end %>
+    </div>
   </div>
   <div class="container">
-  <div class="row">
-  <div class="col-md-6 col-sm-12 col-sm-5 jumbotron">
-    <h3 class="">New Review</h3>
-    <%= render 'reviews/form' %>
+    <div class="row">
+      <div class="col-md-6 col-sm-12 col-sm-5 jumbotron">
+        <h3 class="">New Review</h3>
+        <%= render 'reviews/form' %>
+      </div>
+    </div>
   </div>
-</div>
-</div>
 </div>
 
 <div class="col-md-4 col-md-offset-4 col-sm-12 col-xs-12">
