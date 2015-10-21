@@ -103,3 +103,14 @@ section{
   padding-top: 5%;
   padding-bottom: 5%
 }
+div.cart{
+  float: left;
+  width: 20%;
+  margin-left: 5%;
+  background-color: #28b747;
+  border-radius: 15%;
+  text-align: center;
+  margin-right: 10%;
+  margin-top: 15%;
+  color: white;
+}

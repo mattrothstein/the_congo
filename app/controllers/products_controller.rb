@@ -23,6 +23,7 @@ class ProductsController < ApplicationController
   end
   def buy
     current_user.add_to_cart(@product)
+    current_user.save
     redirect_to products_path
   end
 

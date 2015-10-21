@@ -15,9 +15,19 @@
     </div>
     <% end %>
     <% end %>
+
+
     <div class="link">
       <br>
       <%= link_to 'New Product', new_product_path, class: "btn btn-default button" %>
       <br>
     </div>
+  </div>
+  <div class = "cart">
+    <h3>Your Cart</h3>
+    <% current_user.cart.each do |product| %>
+    <p><%= product.name.capitalize %> -  $<%= product.formatted_price %></p>
+    <%end%>
+    <h2>$<%= current_user.sum %></h2>
+
   </div>

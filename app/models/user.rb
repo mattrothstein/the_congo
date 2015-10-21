@@ -9,4 +9,12 @@ class User < ActiveRecord::Base
     cart.push(product)
   end
 
+  def sum
+    total = 0
+    cart.each do |product|
+      total += product.price_in_cents
+    end
+    format("%.2f", total.to_f / 100)
+  end
+
 end
