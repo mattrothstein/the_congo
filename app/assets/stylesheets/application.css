@@ -98,7 +98,7 @@ div.push_left{
   color: white;
 }
 section{
-  background-image: url(lakefull.jpg);
+  background-image: asset_path('lakefull.jpg');
   height: 100vh;
   padding-top: 5%;
   padding-bottom: 5%
